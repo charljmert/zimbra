@@ -16,10 +16,6 @@ cpan -i Email::Outlook::Message
 ### How to use
  - The following will import files from /home/user/emails/Inbox and /home/user/emails/Sent to user@email.co.za into the new /Archives folder
 ```bash
-#
-# Danie
-#
-
 # create Archives folder (doesn't handle nested directories)
 echo createFolder /Archives | /opt/zimbra/bin/zmmailbox -z -m user@email.co.za
 
