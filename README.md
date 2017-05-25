@@ -33,3 +33,7 @@ for p in 'Inbox' 'Sent'; do find "$p" -type f -iname "*.eml" | /usr/local/bin/zi
 
 ### TODO
 - support nested folder creation
+- create single command with args e.g.
+```bash
+./zimbra_import.pl /home/user/emails /Archives user@email.co.za
+```
