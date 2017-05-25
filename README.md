@@ -1,5 +1,7 @@
 # README #
 
+## Importing Outlook (.msg) files into Zimbra in bulk from disk
+
 This repo contains scripts which help with importing email into zimbra
 1. It details how to convert email from outlook (.msg) to rfc2822 (.eml)
 2. It makes provision for importing emails for a given account in bulk, you only need to amend the bash snippet below to include the folders
