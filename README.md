@@ -13,7 +13,8 @@ This repo contains scripts which help with importing email into zimbra
 cpan -i Email::Outlook::Message
 ```
 
-### The following will import files from /home/user/emails/Inbox and /home/user/emails/Sent to user@email.co.za into the new /Archives folder
+### How to use
+ - The following will import files from /home/user/emails/Inbox and /home/user/emails/Sent to user@email.co.za into the new /Archives folder
 ```bash
 #
 # Danie
