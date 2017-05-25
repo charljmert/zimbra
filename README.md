@@ -12,6 +12,8 @@ This repo contains scripts which help with importing email into zimbra
 ```bash
 cpan -i Email::Outlook::Message
 ```
+### Installation
+ - Clone this repo and copy the scripts in usr/local/bin/* to your systems /usr/local/bin
 
 ### How to use
  - The following will import files from /home/user/emails/Inbox and /home/user/emails/Sent to user@email.co.za into the new /Archives folder
