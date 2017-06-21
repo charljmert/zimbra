@@ -13,7 +13,7 @@ my $usage = <<END;
 Usage: $0 source-dir dest-dir email type[eml|msg|vcf]
 	Options:
     --log-date-format strftime compatible format e.g. '%Y-%m-%d %H:%M:%S'
-	--search find iname paramater e.g. "*.eml" or "" for all files
+    --search find iname paramater e.g. "*.eml" or "" for all files
 END
 
 if (@ARGV < 3) {

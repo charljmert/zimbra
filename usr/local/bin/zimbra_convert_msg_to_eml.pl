@@ -12,7 +12,7 @@ Usage: $0 source-dir
     --dest-dir optional destination directory to copy eml files to
     --msgconvert-bin full path to the msgconvert script e.g. /usr/sbin/msgconvert
     --log-date-format strftime compatible format e.g. '%Y-%m-%d %H:%M:%S'
-	--search find iname paramater e.g. "*.eml" or "" for all files
+    --search find iname paramater e.g. "*.eml" or "" for all files
 END
 
 if (@ARGV < 1) {
