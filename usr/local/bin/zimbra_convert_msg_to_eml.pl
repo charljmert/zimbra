@@ -49,12 +49,14 @@ foreach $file (split (/\n/,  `find "$source_dir" -type f -iname "$search"`)) {
   next unless -f $file;
 
   $path = dirname($file);
-  $path = "$source_dir/$path";
+  $path =~ s{$source_dir/}{}g;
   if ($path =~ /^\.$/) {
     next;
   }
 
-  #print "msgconvert '$file'\n";
+  #print $path . "\n";
+
+  #print "$msgconvert_bin '$file'\n";
   $result = `$msgconvert_bin '$file'`;
   if ($? != 0) {
     $pass = 0;
@@ -62,12 +64,15 @@ foreach $file (split (/\n/,  `find "$source_dir" -type f -iname "$search"`)) {
 	print $date ",ERROR,$msgconvert_bin '$file'," . $result . "\n";
   }
 
-  #print "mv '$filename.eml' '$path'\n";
-  $result = `mv '$filename.eml' '$path'`;
+  my $file_eml = basename($file);
+  $file_eml =~ s/\.msg/.eml/g;
+
+  #print "mv '$file_eml' '$path'\n";
+  $result = `mv '$file_eml' '$path'`;
   if ($? != 0) {
     $pass = 0;
 	my $date = strftime $date_format, localtime;
-	print $date ",ERROR,mv '$filename.eml' '$path'," . $result . "\n";
+	print $date ",ERROR,mv '$file_eml' '$path'," . $result . "\n";
   }
 
   if ($pass != 0) {
