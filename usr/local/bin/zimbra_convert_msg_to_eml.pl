@@ -6,7 +6,7 @@ use POSIX 'strftime';
 use File::Basename;
 use Getopt::Long qw(GetOptions);
 
-my $usage = <<'END';
+my $usage = <<END;
 Usage: $0 source-dir
     Options:
     --dest-dir optional destination directory to copy eml files to
