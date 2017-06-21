@@ -15,14 +15,14 @@ Usage: $0 source-dir
 	--search find iname paramater e.g. "*.eml" or "" for all files
 END
 
-if (@ARGV < 3) {
+if (@ARGV < 1) {
     print $usage;
     exit 1
 }
 
 my $date_format = '%Y-%m-%d %H:%M:%S';
 my $search = '*.msg';
-my $msgconvert_bin = '/usr/sbin/msgconvert';
+my $msgconvert_bin = '/usr/local/bin/msgconvert';
 my $dest_dir = '';
 
 GetOptions(
