@@ -9,7 +9,7 @@ use POSIX 'strftime';
 use File::Basename;
 use Getopt::Long qw(GetOptions);
 
-my $usage = <<'END';
+my $usage = <<END;
 Usage: $0 source-dir dest-dir email type[eml|msg|vcf]
 	Options:
     --log-date-format strftime compatible format e.g. '%Y-%m-%d %H:%M:%S'
